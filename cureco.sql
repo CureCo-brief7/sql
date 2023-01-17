@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 16 jan. 2023 à 11:37
+-- Généré le : mar. 17 jan. 2023 à 19:26
 -- Version du serveur : 10.4.27-MariaDB
--- Version de PHP : 7.4.33
+-- Version de PHP : 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,6 +44,7 @@ CREATE TABLE `product` (
 
 CREATE TABLE `users` (
   `id_u` int(11) NOT NULL,
+  `userName` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL,
   `Role` tinyint(4) NOT NULL DEFAULT 0 COMMENT '0 = members and 1 = admins'
