@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 18 jan. 2023 à 10:07
+-- Généré le : dim. 22 jan. 2023 à 02:27
 -- Version du serveur : 10.4.27-MariaDB
--- Version de PHP : 7.4.33
+-- Version de PHP : 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,6 +34,7 @@ CREATE TABLE `product` (
   `Price` float NOT NULL,
   `Quantity` int(11) NOT NULL,
   `Image` varchar(255) NOT NULL,
+  `date` date NOT NULL,
   `User_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -56,7 +57,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_u`, `userName`, `Email`, `Password`, `Role`) VALUES
-(1, 'marouane', 'uanemaro216@gmail.com', '$2y$10$UV/BfPN21TNnbPOqdjFnfOGQDPkpjuUCmlLck51X/aU2Rqlmru1nu', 1);
+(4, 'marouane', 'uanemaro216@gmail.com', '$2y$10$3YoFMmE2puyMqvw3rWdH0.uqURsU1.aTH0jCxAEhs6FbCzR3b6qQm', 1);
 
 --
 -- Index pour les tables déchargées
@@ -89,7 +90,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Contraintes pour les tables déchargées
